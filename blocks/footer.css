@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: 57px;
+  margin-right: 57px;
+}
+
+.footer__content {
+  padding: 60px 0;
+}
+
+.footer__logo {
+  width: 119px;
+  height: 18px;
+}
