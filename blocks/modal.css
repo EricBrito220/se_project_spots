@@ -77,7 +77,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 100%;
-  max-width: 695px;
+  box-sizing: border-box;
 }
 
 .modal__input::placeholder {
@@ -111,17 +111,23 @@
 
 @media screen and (max-width: 480px) {
   .modal__container {
-    max-width: 300px;
-    padding: 14px;
+    padding: 22px 12px 12px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__close-btn {
+    top: 12px;
+    right: 24px;
   }
 
   .modal__input {
-    max-width: 276px;
-    width: 100%;
     padding: 12px;
   }
 
-  .modal__label {
-    padding: 12px 24px;
+  .modal__submit-btn {
+    max-width: none;
   }
 }
