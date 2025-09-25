@@ -35,19 +35,22 @@ newPostBtn.addEventListener("click", function () {
 
 newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
+  closeModal(NewPostModal);
 });
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  function openModal(modal) {
-    modal.classList.add("modal_opened");
-  }
+  closeModal(editProfileModal);
+}
 
-  function closeModal(modal) {
-    modal.classList.remove("modal_opened");
-  }
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
