@@ -45,7 +45,7 @@ const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const addCardFormElement = newPostModal.querySelector(".modal__form");
-const addCardNameInput = newPostModal.querySelector("##caption-text-input");
+const addCardNameInput = newPostModal.querySelector("#caption-text-input");
 const addCardLinkInput = newPostModal.querySelector("#card-image-input");
 
 const profileNameEl = document.querySelector(".profile__name");
@@ -140,7 +140,7 @@ function handleAddCardSubmit(evt) {
     link: addCardLinkInput.value,
   });
   cardsList.prepend(cardElement);
-  evt.target.reset();
+  addCardFormElement.reset();
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
