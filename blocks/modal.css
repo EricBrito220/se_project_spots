@@ -83,6 +83,11 @@
   font-weight: 500;
   line-height: 100%;
   box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.modal__input:hover {
+  cursor: pointer;
 }
 
 .modal__input::placeholder {
@@ -103,6 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 
 .modal__close-btn:hover {
@@ -112,6 +118,7 @@
 
 .modal__submit-btn:hover {
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.8)
 }
 
 .modal__image-container {
@@ -155,12 +162,6 @@
   opacity: 40%; 
 }
 
-@media screen and (max-width: 627px) {
- .modal__close-btn_type_preview {
-  right: 0;
-  top: -48px;
- }
-}
 
 @media screen and (max-width: 480px) {
   .modal__content {
@@ -184,9 +185,6 @@
     max-width: none;
   }
 
-}
-
-@media screen and (max-width: 627px) {
  .modal__close-btn_type_preview {
   right: 0;
   top: -48px;
@@ -198,5 +196,10 @@
 
  .modal__caption {
   font-size: 16px;
+ }
+
+ .modal__close-btn_type_preview {
+  right: 0;
+  top: -48px;
  }
 }
