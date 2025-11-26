@@ -1,3 +1,5 @@
+
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -45,6 +47,7 @@ const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const addCardFormElement = newPostModal.querySelector(".modal__form");
+const addCardSubmitBtn = newPostModal.querySelector(".modal__button");
 const addCardNameInput = newPostModal.querySelector("#caption-text-input");
 const addCardLinkInput = newPostModal.querySelector("#card-image-input");
 
@@ -96,6 +99,8 @@ editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
   openModal(editProfileModal);
+  resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput]);
+  
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
@@ -138,9 +143,11 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement({
     name: addCardNameInput.value,
     link: addCardLinkInput.value,
+  
   });
   cardsList.prepend(cardElement);
   addCardFormElement.reset();
+  disableButton(addCardSubmitBtn, settings);
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
